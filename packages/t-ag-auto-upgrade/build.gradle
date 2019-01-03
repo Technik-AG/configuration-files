@@ -1,0 +1,23 @@
+plugins {
+    id "nebula.ospackage" version "4.10.0"
+}
+
+version = "1.0"
+description = "Die Konfiguration für automaische Upgrades"
+
+// The distribution package
+task getPackage(type: Deb) {
+    group = "distribution"
+
+    packageName = "t-ag-auto-upgrade"
+    maintainer = "Technik-AG"
+    release = "1"
+
+    // Required packages
+    requires("unattended-upgrades")
+
+    // Configuration for unattended-upgrades
+    from("./src/51t-ag-auto-upgrade") {
+        into("/etc/apt/apt.conf.d")
+    }
+}
