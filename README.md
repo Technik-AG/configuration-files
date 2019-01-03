@@ -4,3 +4,4 @@ Diese Pakete enthalten Konfigurationsdateien und werden über die [Technik-AG AP
 
 Enthalten sind:
  * [`t-ag-router-configuration`](packages/t-ag-router-configuration/README.md)
+ * [`t-ag-auto-upgrade`](packages/t-ag-auto-upgrade/README.md)
