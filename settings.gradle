@@ -1,0 +1,3 @@
+file('packages').eachDir {
+    include "packages/$it.name"
+}

@@ -1,0 +1,7 @@
+plugins {
+    id "nebula.ospackage" version "4.10.0" apply false
+}
+
+subprojects {
+    apply plugin: "nebula.ospackage"
+}

@@ -1,0 +1,31 @@
+version = "1.0"
+description = "Die Konfiguration zum Teilen der Internetverbindung"
+
+// The distribution package
+task getPackage(type: Deb) {
+    group = "distribution"
+
+    packageName = "t-ag-router-config"
+    maintainer = "Technik-AG"
+    release = "1"
+
+    // Required packages
+    requires("network-manager")
+
+    // Required by NetworkManager for connection sharing
+    requires("dnsmasq-base")
+    requires("iptables")
+
+    // Copy the connection settings
+    from("./src/t-ag-shared") {
+        into("/etc/NetworkManager/system-connections")
+
+        // NetworkManager only accepts files with secure permissions
+        fileMode 0600
+    }
+
+    // Configuration for the router's name
+    from("./src/router-hostname.conf") {
+        into("/etc/NetworkManager/dnsmasq-shared.d")
+    }
+}
