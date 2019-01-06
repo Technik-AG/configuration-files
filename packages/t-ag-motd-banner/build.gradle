@@ -1,0 +1,18 @@
+plugins {
+    id "nebula.ospackage" version "4.10.0"
+}
+
+version = "1.0"
+description = "Lässt den Text \"Technik-AG\" über der MOTD erscheinen"
+
+task getPackage(type: Deb) {
+    group = "distribution"
+
+    packageName = "t-ag-motd-banner"
+    maintainer = "Technik-AG"
+    release = "1"
+
+    from("./src/11-t-ag-banner") {
+        into("/etc/update-motd.d")
+    }
+}
