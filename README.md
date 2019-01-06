@@ -6,3 +6,4 @@ Enthalten sind:
  * [`t-ag-auto-upgrade`](packages/t-ag-auto-upgrade/README.md)
  * [`t-ag-motd-banner`](packages/t-ag-motd-banner/README.md)
  * [`t-ag-router-configuration`](packages/t-ag-router-configuration/README.md)
+ * [`t-ag-sudo-pwfeedback`](packages/t-ag-sudo-pwfeedback/README.md)

@@ -1,0 +1,18 @@
+plugins {
+    id "nebula.ospackage" version "4.10.0"
+}
+
+version = "1.0"
+description = "Aktiviert Passwortfeedback in sudo"
+
+task getPackage(type: Deb) {
+    group = "distribution"
+
+    packageName = "t-ag-sudo-pwfeedback"
+    maintainer = "Technik-AG"
+    release = "1"
+
+    from("./src/010_t-ag-pwfeedback") {
+        into("/etc/sudoers.d")
+    }
+}
