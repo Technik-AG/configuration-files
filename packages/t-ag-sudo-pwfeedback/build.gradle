@@ -11,6 +11,7 @@ task getPackage(type: Deb) {
     packageName = "t-ag-sudo-pwfeedback"
     maintainer = "Technik-AG"
     release = "1"
+    user = "root"
 
     from("./src/010_t-ag-pwfeedback") {
         into("/etc/sudoers.d")

@@ -12,6 +12,7 @@ task getPackage(type: Deb) {
     packageName = "t-ag-router-config"
     maintainer = "Technik-AG"
     release = "1"
+    user = "root"
 
     // Required packages
     requires("network-manager")
