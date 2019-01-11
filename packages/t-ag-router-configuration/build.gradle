@@ -11,7 +11,7 @@ task getPackage(type: Deb) {
 
     packageName = "t-ag-router-config"
     maintainer = "Technik-AG"
-    release = "1"
+    release = "2"
     user = "root"
 
     // Required packages

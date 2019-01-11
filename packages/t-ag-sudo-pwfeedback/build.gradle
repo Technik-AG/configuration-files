@@ -10,7 +10,7 @@ task getPackage(type: Deb) {
 
     packageName = "t-ag-sudo-pwfeedback"
     maintainer = "Technik-AG"
-    release = "1"
+    release = "2"
     user = "root"
 
     from("./src/010_t-ag-pwfeedback") {

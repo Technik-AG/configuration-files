@@ -10,7 +10,7 @@ task getPackage(type: Deb) {
 
     packageName = "t-ag-motd-banner"
     maintainer = "Technik-AG"
-    release = "1"
+    release = "2"
     user = "root"
 
     from("./src/11-t-ag-banner") {
