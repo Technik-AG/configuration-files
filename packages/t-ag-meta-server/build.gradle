@@ -1,0 +1,20 @@
+plugins {
+    id "nebula.ospackage" version "4.10.0"
+}
+
+version = "1.0"
+description = "Ein Metapaket für Konfigurationen für Server"
+
+// The distribution package
+task getPackage(type: Deb) {
+    group = "distribution"
+
+    packageName = "t-ag-meta-server"
+    maintainer = "Technik-AG"
+    release = "1"
+    user = "root"
+
+    // Packages
+    requires("t-ag-meta-base")
+    requires("t-ag-power-ignore-lid")
+}
