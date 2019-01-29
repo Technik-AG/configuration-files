@@ -1,0 +1,21 @@
+plugins {
+    id "nebula.ospackage" version "4.10.0"
+}
+
+version = "1.0"
+description = "Eine Konfiguration, um das Schlließen eines Laptopbildschirms zu ignorieren"
+
+// The distribution package
+task getPackage(type: Deb) {
+    group = "distribution"
+
+    packageName = "t-ag-power-ignore-lid"
+    maintainer = "Technik-AG"
+    release = "1"
+    user = "root"
+
+    // Configuration for systemd-logind
+    from("./src/power-ignore-lid.conf") {
+        into("/usr/lib/systemd/logind.conf.d/")
+    }
+}
