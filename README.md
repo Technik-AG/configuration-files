@@ -5,6 +5,7 @@ Diese Pakete enthalten Konfigurationsdateien und werden über die [Technik-AG AP
 Enthalten sind:
  * [`t-ag-auto-upgrade`](packages/t-ag-auto-upgrade/README.md)
  * [`t-ag-meta-base`](packages/t-ag-meta-base/README.md) (Metapaket)
+ * [`t-ag-meta-desktop`](packages/t-ag-meta-desktop/README.md) (Metapaket)
  * [`t-ag-meta-server`](packages/t-ag-meta-server/README.md) (Metapaket)
  * [`t-ag-motd-banner`](packages/t-ag-motd-banner/README.md)
  * [`t-ag-power-ignore-lid`](packages/t-ag-power-ignore-lid/README.md)
