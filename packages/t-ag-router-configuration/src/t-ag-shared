@@ -5,3 +5,4 @@ type=ethernet
 
 [ipv4]
 method=shared
+address1=10.10.10.1/24
