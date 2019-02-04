@@ -2,7 +2,7 @@ plugins {
     id "nebula.ospackage" version "4.10.0"
 }
 
-version = "1.0"
+version = "1.1"
 description = "Ein Metapaket für Grundlegende Konfigurationen"
 
 // The distribution package
@@ -14,8 +14,11 @@ task getPackage(type: Deb) {
     release = "1"
     user = "root"
 
-    // Packages
+    // Internal packages
     requires("t-ag-auto-upgrade")
     requires("t-ag-motd-banner")
     requires("t-ag-sudo-pwfeedback")
+
+    // External packages
+    requires("avahi-daemon")
 }
