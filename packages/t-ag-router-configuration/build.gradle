@@ -22,7 +22,7 @@ task getPackage(type: Deb) {
     requires("iptables")
 
     // Copy the connection settings
-    from("./src/t-ag-shared") {
+    from("./src/NetworkManager/system-connections") {
         into("/etc/NetworkManager/system-connections")
 
         // NetworkManager only accepts files with secure permissions
@@ -30,7 +30,7 @@ task getPackage(type: Deb) {
     }
 
     // Configuration for the router's name
-    from("./src/t-ag-router.conf") {
+    from("./src/NetworkManager/dnsmasq-shared.d") {
         into("/etc/NetworkManager/dnsmasq-shared.d")
     }
 }
