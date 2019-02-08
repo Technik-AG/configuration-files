@@ -30,7 +30,7 @@ task getPackage(type: Deb) {
     }
 
     // Configuration for the router's name
-    from("./src/router-hostname.conf") {
+    from("./src/t-ag-router.conf") {
         into("/etc/NetworkManager/dnsmasq-shared.d")
     }
 }
