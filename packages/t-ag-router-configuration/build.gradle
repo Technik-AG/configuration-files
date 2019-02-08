@@ -33,4 +33,9 @@ task getPackage(type: Deb) {
     from("./src/NetworkManager/dnsmasq-shared.d") {
         into("/etc/NetworkManager/dnsmasq-shared.d")
     }
+
+    // Configuration for NetworkManager itself
+    from("./src/NetworkManager/conf.d") {
+        into("/etc/NetworkManager/conf.d")
+    }
 }
