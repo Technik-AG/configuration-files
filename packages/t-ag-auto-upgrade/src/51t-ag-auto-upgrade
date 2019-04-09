@@ -4,7 +4,7 @@ Unattended-Upgrade::Origins-Pattern {
     "origin=Technik-AG,suite=stable";
 };
 
-// Enable unatended-upgrade
+// Enable unattended-upgrade
 APT::Periodic::Update-Package-Lists "1";
 APT::Periodic::Unattended-Upgrade "1";
 
