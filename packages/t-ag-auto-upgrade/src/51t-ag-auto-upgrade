@@ -1,4 +1,12 @@
+// Origins
 Unattended-Upgrade::Origins-Pattern {
     // Upgrades aus der Technik-AG-Repository
     "origin=Technik-AG,suite=stable";
 };
+
+// Enable unatended-upgrade
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
+
+// Configuration for unattended-upgrade
+Unattended-Upgrade::Remove-New-Unused-Dependencies "true";
